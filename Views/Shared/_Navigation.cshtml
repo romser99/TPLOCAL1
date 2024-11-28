@@ -1,0 +1,31 @@
+﻿@{
+    // Récupérer l'URL actuelle
+    var currentUrl = ViewContext.HttpContext.Request.Path;
+}
+
+<nav>
+    <ul>
+        @if (currentUrl != "/Home/Index")
+        {
+            <li>
+                <a href="/Home/Index">Accueil</a>
+            </li>
+        }
+          
+        
+        @if (currentUrl != "/Home/Index/Form" && currentUrl != "/Home/SubmitForm")
+        {
+            <li>
+                <a href="/Home/Index/Form">Remplir le formulaire</a>
+            </li>
+        }
+        @if (currentUrl != "/Home/Index/AvisList")
+        {
+            <li>
+                <a href="/Home/Index/AvisList">Liste des avis</a>
+            </li>
+        }  
+        
+    </ul>
+</nav>
+

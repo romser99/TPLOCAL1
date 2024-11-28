@@ -1,0 +1,24 @@
+﻿@{
+    // Récupérer l'URL actuelle
+    var currentUrl = ViewContext.HttpContext.Request.Path;
+}
+<header>
+    <img src="~/resources/GroupeHN.png" class="image" alt="GroupHN" />
+    @if (currentUrl == "/Home/Index")
+    {
+        <h1>Bienvenue dans le TP HN</h1>
+    }
+    @if (currentUrl == "/Home/Index/Form" || currentUrl == "/Home/SubmitForm")
+    {
+        <h1>Formulaire TP HN avis</h1>
+    }
+    
+    @if (currentUrl == "/Home/Index/ValidateForm")
+    {
+        <h1>Page de validation</h1>
+    }
+    @if (currentUrl == "/Home/Index/AvisList")
+    {
+        <h1>Liste des Avis</h1>
+    }
+</header>
